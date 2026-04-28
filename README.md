@@ -1,1 +1,1 @@
-# devpath-gest-o-ai
+# devpath-gestao-ai
