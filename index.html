@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevPath — Engenharia de Software Profissional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">Dev<span>Path</span></a>
+      <ul class="nav-links">
+        <li><a href="#paradigmas">Paradigmas</a></li>
+        <li><a href="#arquitetura">Arquitetura</a></li>
+        <li><a href="#ciclo">Ciclo de Vida</a></li>
+        <li><a href="#metodos">Métodos</a></li>
+        <li><a href="#agil">Ágil & DevOps</a></li>
+        <li><a href="#etica">Ética</a></li>
+      </ul>
+      <button class="nav-cta">Explorar</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Engenharia de Software — Fundamentos &amp; Prática
+      </div>
+      <h1 class="hero-title">
+        Desenvolvimento de<br />
+        <em>Software Profissional</em>
+      </h1>
+      <p class="hero-sub">
+        Da teoria à prática: paradigmas, arquitetura, ciclo de vida,
+        metodologias tradicionais e ágeis — e os princípios éticos que
+        guiam o desenvolvimento moderno.
+      </p>
+      <div class="hero-actions">
+        <a href="#paradigmas" class="btn-primary">Começar Agora</a>
+        <a href="#metodos" class="btn-ghost">Ver Metodologias</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>6</span><small>Módulos</small></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span>4</span><small>Modelos Tradicionais</small></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span>DevOps</span><small>Pipeline Moderno</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-title">software_lifecycle.py</span>
+        </div>
+        <pre class="code-body"><span class="c"># Ciclo de Vida do Software</span>
+<span class="k">class</span> <span class="cn">SoftwareProcess</span>:
+    phases = [
+        <span class="s">"Requisitos"</span>,
+        <span class="s">"Design"</span>,
+        <span class="s">"Implementação"</span>,
+        <span class="s">"Testes"</span>,
+        <span class="s">"Implantação"</span>,
+        <span class="s">"Manutenção"</span>,
+    ]
+
+    <span class="k">def</span> <span class="fn">iterate</span>(self, model):
+        <span class="k">return</span> model.execute(
+            self.phases
+        )</pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== SEÇÃO 1: PARADIGMAS ====== -->
+  <section class="section" id="paradigmas">
+    <div class="container">
+      <div class="section-label">01 — Paradigmas</div>
+      <h2 class="section-title">Evolução &amp; Paradigmas<br />de Desenvolvimento</h2>
+      <p class="section-lead">
+        A engenharia de software evoluiu ao longo de décadas, passando por crises,
+        revoluções e consolidações de boas práticas que formam os alicerces do
+        desenvolvimento moderno.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item" style="--delay:0s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1950–1960</div>
+          <div class="timeline-card">
+            <h3>Era da Programação Artesanal</h3>
+            <p>Software escrito em linguagem de máquina ou Assembly por especialistas altamente técnicos. Não havia metodologia formal — a criação era puramente intuitiva e dependia do talento individual.</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--delay:.1s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1968</div>
+          <div class="timeline-card highlight">
+            <h3>Crise do Software</h3>
+            <p>A Conferência de Garmisch cunhou o termo "Crise do Software": projetos sistematicamente atrasados, acima do orçamento e com falhas críticas. Nasce a necessidade de uma <strong>engenharia formal</strong>.</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--delay:.2s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1970–1990</div>
+          <div class="timeline-card">
+            <h3>Paradigma Estruturado</h3>
+            <p>Surgem linguagens de alto nível, programação estruturada (sequência, seleção, repetição), modularização e as primeiras metodologias formais como o Modelo Cascata de Royce (1970).</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--delay:.3s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1990–2000</div>
+          <div class="timeline-card">
+            <h3>Paradigma Orientado a Objetos</h3>
+            <p>Encapsulamento, herança e polimorfismo revolucionam o design. Surge a UML (1997) como linguagem de modelagem unificada. Java, C++ e Smalltalk dominam o cenário empresarial.</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--delay:.4s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2001–presente</div>
+          <div class="timeline-card highlight">
+            <h3>Era Ágil, Cloud e IA</h3>
+            <p>O Manifesto Ágil (2001) redefine prioridades. A computação em nuvem, microsserviços, DevOps e agora a IA generativa reconfiguram completamente como o software é pensado, desenvolvido e entregue.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="paradigm-grid">
+        <div class="paradigm-card">
+          <div class="paradigm-icon">∫</div>
+          <h3>Estruturado</h3>
+          <p>Fluxo de controle explícito. Funções e procedimentos como unidades básicas. Base da programação imperativa clássica.</p>
+          <ul class="tag-list">
+            <li>C</li><li>Pascal</li><li>COBOL</li>
+          </ul>
+        </div>
+        <div class="paradigm-card">
+          <div class="paradigm-icon">⬡</div>
+          <h3>Orientado a Objetos</h3>
+          <p>Modelagem baseada em entidades do mundo real. Encapsulamento, herança e polimorfismo como pilares fundamentais.</p>
+          <ul class="tag-list">
+            <li>Java</li><li>C#</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="paradigm-card">
+          <div class="paradigm-icon">λ</div>
+          <h3>Funcional</h3>
+          <p>Funções puras, imutabilidade e ausência de efeitos colaterais. Ideal para sistemas concorrentes e de alta confiabilidade.</p>
+          <ul class="tag-list">
+            <li>Haskell</li><li>Erlang</li><li>Clojure</li>
+          </ul>
+        </div>
+        <div class="paradigm-card">
+          <div class="paradigm-icon">⚡</div>
+          <h3>Reativo / Orientado a Eventos</h3>
+          <p>Sistemas que respondem a fluxos de dados assíncronos. Base do desenvolvimento moderno de front-end e microsserviços.</p>
+          <ul class="tag-list">
+            <li>Rx</li><li>Node.js</li><li>Kafka</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO 2: ÉTICA ====== -->
+  <section class="section section-dark" id="etica">
+    <div class="container">
+      <div class="section-label light">02 — Ética</div>
+      <h2 class="section-title light">Aspectos Éticos no<br />Desenvolvimento de Software</h2>
+      <p class="section-lead light">
+        O poder de criar software traz responsabilidades profundas: privacidade, impacto
+        social, viés algorítmico e sustentabilidade são questões centrais da engenharia moderna.
+      </p>
+
+      <div class="ethics-grid">
+        <div class="ethics-card">
+          <div class="ethics-number">01</div>
+          <h3>Privacidade por Design</h3>
+          <p>A proteção de dados não é um add-on — é um requisito de arquitetura. Princípios GDPR/LGPD, minimização de dados e consentimento explícito devem ser embutidos desde o início do projeto, não adicionados ao final.</p>
+        </div>
+        <div class="ethics-card">
+          <div class="ethics-number">02</div>
+          <h3>Responsabilidade Algorítmica</h3>
+          <p>Algoritmos podem perpetuar ou amplificar preconceitos existentes. Engenheiros têm a responsabilidade ética de auditar modelos de ML, verificar distribuições de treinamento e documentar limitações de sistemas automatizados.</p>
+        </div>
+        <div class="ethics-card">
+          <div class="ethics-number">03</div>
+          <h3>Acessibilidade Universal</h3>
+          <p>Software que exclui pessoas com deficiências é antiético e, em muitos países, ilegal. As diretrizes WCAG 2.1 devem ser requisitos de aceite, não melhorias futuras — acessibilidade é direito, não feature.</p>
+        </div>
+        <div class="ethics-card">
+          <div class="ethics-number">04</div>
+          <h3>Transparência &amp; Explicabilidade</h3>
+          <p>Sistemas que tomam decisões impactantes (crédito, saúde, justiça) devem ser explicáveis. O "caixa-preta" é eticamente inaceitável quando afeta direitos fundamentais de pessoas.</p>
+        </div>
+        <div class="ethics-card">
+          <div class="ethics-number">05</div>
+          <h3>Segurança como Obrigação</h3>
+          <p>Negligenciar segurança não é apenas um risco técnico — é uma falha ética. Práticas como SAST, testes de penetração, gestão de vulnerabilidades e disclosure responsável são deveres profissionais.</p>
+        </div>
+        <div class="ethics-card">
+          <div class="ethics-number">06</div>
+          <h3>Impacto Ambiental</h3>
+          <p>Green software engineering mensura e reduz a pegada de carbono do desenvolvimento. Escolhas arquiteturais (serverless, otimização de queries, compressão de dados) têm impacto ambiental real e mensurável.</p>
+        </div>
+      </div>
+
+      <div class="ethics-quote">
+        <blockquote>
+          "Com grande poder computacional vem grande responsabilidade. O código que você escreve hoje pode afetar milhões de vidas amanhã."
+        </blockquote>
+        <cite>— ACM Code of Ethics &amp; Professional Conduct</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO 3: ARQUITETURA ====== -->
+  <section class="section" id="arquitetura">
+    <div class="container">
+      <div class="section-label">03 — Arquitetura</div>
+      <h2 class="section-title">Fundamentos de<br />Arquitetura de Software</h2>
+      <p class="section-lead">
+        Arquitetura de software é a estrutura fundamental de um sistema: seus componentes,
+        suas relações e os princípios que guiam seu design e evolução ao longo do tempo.
+      </p>
+
+      <div class="arch-objectives">
+        <div class="arch-obj-header">
+          <h3>Objetivos Fundamentais</h3>
+        </div>
+        <div class="arch-obj-grid">
+          <div class="arch-obj-item">
+            <span class="arch-icon">⚙</span>
+            <strong>Escalabilidade</strong>
+            <p>Capacidade de crescer horizontalmente ou verticalmente sem reescrever o sistema central.</p>
+          </div>
+          <div class="arch-obj-item">
+            <span class="arch-icon">🛡</span>
+            <strong>Confiabilidade</strong>
+            <p>Operação correta mesmo sob falhas parciais, com resiliência e recuperação automática.</p>
+          </div>
+          <div class="arch-obj-item">
+            <span class="arch-icon">🔧</span>
+            <strong>Manutenibilidade</strong>
+            <p>Facilidade de entender, modificar e evoluir o sistema sem introduzir regressões.</p>
+          </div>
+          <div class="arch-obj-item">
+            <span class="arch-icon">⚡</span>
+            <strong>Performance</strong>
+            <p>Tempo de resposta e throughput adequados às necessidades reais dos usuários.</p>
+          </div>
+          <div class="arch-obj-item">
+            <span class="arch-icon">🔒</span>
+            <strong>Segurança</strong>
+            <p>Proteção contra ameaças, com autenticação, autorização e criptografia adequadas.</p>
+          </div>
+          <div class="arch-obj-item">
+            <span class="arch-icon">🔗</span>
+            <strong>Interoperabilidade</strong>
+            <p>Capacidade de integrar-se com outros sistemas via padrões abertos e APIs bem definidas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-patterns">
+        <h3 class="sub-title">Padrões Arquiteturais</h3>
+        <div class="patterns-row">
+          <div class="pattern-card">
+            <div class="pattern-visual mono">
+              <div class="layer">Apresentação</div>
+              <div class="layer-arrow">↕</div>
+              <div class="layer">Negócio</div>
+              <div class="layer-arrow">↕</div>
+              <div class="layer">Dados</div>
+            </div>
+            <h4>Camadas (N-Tier)</h4>
+            <p>Separação clara de responsabilidades em camadas horizontais. Padrão clássico, amplamente adotado em sistemas corporativos.</p>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-visual micro">
+              <div class="service-box">Auth</div>
+              <div class="service-box">Orders</div>
+              <div class="service-box">Users</div>
+              <div class="service-box">Payment</div>
+            </div>
+            <h4>Microsserviços</h4>
+            <p>Serviços pequenos, autônomos e com responsabilidade única. Escalados independentemente via containers e orquestração.</p>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-visual event">
+              <div class="event-hub">Event Bus</div>
+              <div class="event-subs">
+                <span>Sub A</span>
+                <span>Sub B</span>
+                <span>Sub C</span>
+              </div>
+            </div>
+            <h4>Orientada a Eventos</h4>
+            <p>Comunicação assíncrona via mensagens. Desacoplamento máximo entre produtores e consumidores. Base do streaming de dados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="solid-section">
+        <h3 class="sub-title">Princípios SOLID</h3>
+        <div class="solid-grid">
+          <div class="solid-item">
+            <span class="solid-letter">S</span>
+            <div>
+              <strong>Single Responsibility</strong>
+              <p>Uma classe deve ter apenas um motivo para mudar.</p>
+            </div>
+          </div>
+          <div class="solid-item">
+            <span class="solid-letter">O</span>
+            <div>
+              <strong>Open/Closed</strong>
+              <p>Aberto para extensão, fechado para modificação.</p>
+            </div>
+          </div>
+          <div class="solid-item">
+            <span class="solid-letter">L</span>
+            <div>
+              <strong>Liskov Substitution</strong>
+              <p>Subtipos devem ser substituíveis por seus tipos-base.</p>
+            </div>
+          </div>
+          <div class="solid-item">
+            <span class="solid-letter">I</span>
+            <div>
+              <strong>Interface Segregation</strong>
+              <p>Interfaces específicas são melhores que uma interface geral.</p>
+            </div>
+          </div>
+          <div class="solid-item">
+            <span class="solid-letter">D</span>
+            <div>
+              <strong>Dependency Inversion</strong>
+              <p>Dependa de abstrações, não de implementações concretas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO 4: CICLO DE VIDA ====== -->
+  <section class="section section-tinted" id="ciclo">
+    <div class="container">
+      <div class="section-label">04 — Ciclo de Vida</div>
+      <h2 class="section-title">Ciclo de Vida<br />do Software (SDLC)</h2>
+      <p class="section-lead">
+        O SDLC (Software Development Life Cycle) é um processo estruturado que define
+        as fases pelas quais um sistema passa, do conceito à aposentadoria.
+      </p>
+
+      <div class="sdlc-wheel">
+        <div class="sdlc-phases">
+          <div class="sdlc-phase" style="--i:0">
+            <div class="phase-number">1</div>
+            <div class="phase-content">
+              <h3>Levantamento de Requisitos</h3>
+              <p>Identificação das necessidades dos stakeholders. Técnicas: entrevistas, workshops, prototipagem, análise de documentos e observação. Resultado: especificação funcional e não-funcional.</p>
+              <div class="phase-artifacts">
+                <span>Documento de Requisitos</span>
+                <span>User Stories</span>
+                <span>Casos de Uso</span>
+              </div>
+            </div>
+          </div>
+          <div class="sdlc-phase" style="--i:1">
+            <div class="phase-number">2</div>
+            <div class="phase-content">
+              <h3>Análise &amp; Design</h3>
+              <p>Modelagem da solução: arquitetura, banco de dados, fluxos de dados, interfaces e integrações. Uso de UML, ERD, wireframes e protótipos de alta fidelidade.</p>
+              <div class="phase-artifacts">
+                <span>Diagramas UML</span>
+                <span>Protótipos</span>
+                <span>Arquitetura</span>
+              </div>
+            </div>
+          </div>
+          <div class="sdlc-phase" style="--i:2">
+            <div class="phase-number">3</div>
+            <div class="phase-content">
+              <h3>Implementação</h3>
+              <p>Codificação seguindo padrões definidos. Code review, pair programming, TDD (Test-Driven Development) e continuous integration garantem qualidade durante o desenvolvimento.</p>
+              <div class="phase-artifacts">
+                <span>Código-fonte</span>
+                <span>Testes Unitários</span>
+                <span>Documentação Técnica</span>
+              </div>
+            </div>
+          </div>
+          <div class="sdlc-phase" style="--i:3">
+            <div class="phase-number">4</div>
+            <div class="phase-content">
+              <h3>Testes &amp; Qualidade</h3>
+              <p>Verificação e validação em múltiplos níveis: unitário, integração, sistema, aceitação (UAT), performance e segurança. Gestão de defeitos com rastreabilidade.</p>
+              <div class="phase-artifacts">
+                <span>Plano de Testes</span>
+                <span>Relatórios de QA</span>
+                <span>Métricas de Cobertura</span>
+              </div>
+            </div>
+          </div>
+          <div class="sdlc-phase" style="--i:4">
+            <div class="phase-number">5</div>
+            <div class="phase-content">
+              <h3>Implantação</h3>
+              <p>Deploy em produção com estratégias de rollout seguro: blue-green, canary release, feature flags. Monitoramento pós-deploy com observabilidade (logs, métricas, traces).</p>
+              <div class="phase-artifacts">
+                <span>Pipeline CI/CD</span>
+                <span>Runbook</span>
+                <span>Plano de Rollback</span>
+              </div>
+            </div>
+          </div>
+          <div class="sdlc-phase" style="--i:5">
+            <div class="phase-number">6</div>
+            <div class="phase-content">
+              <h3>Manutenção &amp; Evolução</h3>
+              <p>Correção de bugs, melhorias de performance, adaptações a mudanças de requisitos e tecnologias. Refactoring contínuo para gestão de dívida técnica.</p>
+              <div class="phase-artifacts">
+                <span>Gestão de Mudanças</span>
+                <span>SLA / SLO</span>
+                <span>Backlog de Melhorias</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO 5: MÉTODOS TRADICIONAIS ====== -->
+  <section class="section" id="metodos">
+    <div class="container">
+      <div class="section-label">05 — Metodologias</div>
+      <h2 class="section-title">Tradicional vs. Ágil:<br />Uma Comparação Fundamental</h2>
+
+      <div class="compare-table">
+        <div class="compare-header">
+          <div class="compare-aspect">Aspecto</div>
+          <div class="compare-traditional">
+            <span class="method-badge trad">Tradicional</span>
+          </div>
+          <div class="compare-agile">
+            <span class="method-badge agil">Ágil</span>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Requisitos</div>
+          <div class="compare-traditional">Definidos e congelados no início</div>
+          <div class="compare-agile">Evoluem continuamente</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Entrega</div>
+          <div class="compare-traditional">Única ao final do projeto</div>
+          <div class="compare-agile">Incremental e frequente (sprints)</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Cliente</div>
+          <div class="compare-traditional">Envolvido no início e no fim</div>
+          <div class="compare-agile">Parceiro contínuo do processo</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Documentação</div>
+          <div class="compare-traditional">Extensa e formal</div>
+          <div class="compare-agile">Suficiente e funcional</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Mudanças</div>
+          <div class="compare-traditional">Alto custo e resistência</div>
+          <div class="compare-agile">Bem-vindas e esperadas</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Equipe</div>
+          <div class="compare-traditional">Especializada e hierárquica</div>
+          <div class="compare-agile">Multidisciplinar e auto-organizada</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-aspect">Ideal para</div>
+          <div class="compare-traditional">Projetos estáveis, contratos fixos</div>
+          <div class="compare-agile">Produtos digitais, incerteza alta</div>
+        </div>
+      </div>
+
+      <h3 class="sub-title" style="margin-top:4rem">Modelos Tradicionais</h3>
+
+      <div class="models-grid">
+        <!-- CASCATA -->
+        <div class="model-card" id="cascata">
+          <div class="model-header">
+            <div class="model-icon">▼</div>
+            <div>
+              <h3>Modelo Cascata</h3>
+              <span class="model-year">Royce, 1970</span>
+            </div>
+          </div>
+          <p class="model-desc">O modelo mais clássico: fases sequenciais e lineares onde cada fase deve ser completada antes da próxima começar. Simples de entender e gerenciar, mas inflexível a mudanças.</p>
+          <div class="waterfall-diagram">
+            <div class="wf-step">Requisitos</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-step">Design</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-step">Código</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-step">Teste</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-step">Deploy</div>
+          </div>
+          <div class="model-pros-cons">
+            <div class="pros">
+              <strong>✓ Vantagens</strong>
+              <ul>
+                <li>Simples e documentado</li>
+                <li>Fácil gestão e controle</li>
+                <li>Ideal para requisitos estáveis</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <strong>✗ Limitações</strong>
+              <ul>
+                <li>Sem feedback intermediário</li>
+                <li>Alto risco de retrabalho</li>
+                <li>Entrega tardia de valor</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- INCREMENTAL -->
+        <div class="model-card" id="incremental">
+          <div class="model-header">
+            <div class="model-icon">⊞</div>
+            <div>
+              <h3>Modelo Incremental</h3>
+              <span class="model-year">Mills, 1980</span>
+            </div>
+          </div>
+          <p class="model-desc">Divide o sistema em incrementos funcionais entregues progressivamente. Cada incremento adiciona funcionalidade ao anterior, permitindo feedback mais cedo e entrega parcial de valor.</p>
+          <div class="incremental-diagram">
+            <div class="inc-row">
+              <span class="inc-label">Incremento 1</span>
+              <div class="inc-bar" style="width:30%">Core Features</div>
+            </div>
+            <div class="inc-row">
+              <span class="inc-label">Incremento 2</span>
+              <div class="inc-bar" style="width:55%">+ Módulo B</div>
+            </div>
+            <div class="inc-row">
+              <span class="inc-label">Incremento 3</span>
+              <div class="inc-bar" style="width:80%">+ Módulo C</div>
+            </div>
+            <div class="inc-row">
+              <span class="inc-label">Incremento 4</span>
+              <div class="inc-bar" style="width:100%">Sistema Completo</div>
+            </div>
+          </div>
+          <div class="model-pros-cons">
+            <div class="pros">
+              <strong>✓ Vantagens</strong>
+              <ul>
+                <li>Entrega parcial antecipada</li>
+                <li>Feedback mais cedo</li>
+                <li>Risco menor por incremento</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <strong>✗ Limitações</strong>
+              <ul>
+                <li>Integração complexa</li>
+                <li>Planejamento mais difícil</li>
+                <li>Requer arquitetura sólida</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESPIRAL -->
+        <div class="model-card" id="espiral">
+          <div class="model-header">
+            <div class="model-icon">◎</div>
+            <div>
+              <h3>Modelo Espiral</h3>
+              <span class="model-year">Boehm, 1986</span>
+            </div>
+          </div>
+          <p class="model-desc">Combina iteração com análise de risco sistemática. Cada volta da espiral passa por quatro quadrantes: planejamento, análise de riscos, engenharia e avaliação. Ideal para projetos de alto risco.</p>
+          <div class="spiral-diagram">
+            <div class="spiral-quadrant q1">
+              <span>Planejamento</span>
+            </div>
+            <div class="spiral-quadrant q2">
+              <span>Análise de Riscos</span>
+            </div>
+            <div class="spiral-quadrant q3">
+              <span>Avaliação</span>
+            </div>
+            <div class="spiral-quadrant q4">
+              <span>Engenharia</span>
+            </div>
+            <div class="spiral-center">⟳</div>
+          </div>
+          <div class="model-pros-cons">
+            <div class="pros">
+              <strong>✓ Vantagens</strong>
+              <ul>
+                <li>Gestão de riscos explícita</li>
+                <li>Flexível a mudanças</li>
+                <li>Prototipagem contínua</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <strong>✗ Limitações</strong>
+              <ul>
+                <li>Complexo de gerenciar</li>
+                <li>Custo elevado</li>
+                <li>Exige expertise em riscos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO 6: ÁGIL & DEVOPS ====== -->
+  <section class="section section-dark" id="agil">
+    <div class="container">
+      <div class="section-label light">06 — Ágil &amp; DevOps</div>
+      <h2 class="section-title light">Desenvolvimento Ágil<br />&amp; Pipeline DevOps</h2>
+      <p class="section-lead light">
+        O Manifesto Ágil (2001) e a cultura DevOps transformaram radicalmente como
+        software é desenvolvido e entregue — colocando pessoas, colaboração e entrega
+        contínua no centro do processo.
+      </p>
+
+      <div class="manifesto-box">
+        <h3>Os 4 Valores do Manifesto Ágil</h3>
+        <div class="manifesto-values">
+          <div class="manifesto-value">
+            <div class="mv-left">Indivíduos e interações</div>
+            <div class="mv-over">mais que</div>
+            <div class="mv-right">processos e ferramentas</div>
+          </div>
+          <div class="manifesto-value">
+            <div class="mv-left">Software funcionando</div>
+            <div class="mv-over">mais que</div>
+            <div class="mv-right">documentação abrangente</div>
+          </div>
+          <div class="manifesto-value">
+            <div class="mv-left">Colaboração com o cliente</div>
+            <div class="mv-over">mais que</div>
+            <div class="mv-right">negociação de contratos</div>
+          </div>
+          <div class="manifesto-value">
+            <div class="mv-left">Responder a mudanças</div>
+            <div class="mv-over">mais que</div>
+            <div class="mv-right">seguir um plano</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agile-frameworks">
+        <h3 class="sub-title light">Frameworks Ágeis</h3>
+        <div class="framework-cards">
+          <div class="fw-card">
+            <h4>Scrum</h4>
+            <p>Framework iterativo com sprints de 1-4 semanas. Papéis definidos: Product Owner, Scrum Master e Dev Team. Cerimônias: Planning, Daily, Review e Retrospective.</p>
+            <div class="fw-tags">
+              <span>Sprints</span><span>Product Backlog</span><span>Velocity</span>
+            </div>
+          </div>
+          <div class="fw-card">
+            <h4>Kanban</h4>
+            <p>Visualização do fluxo de trabalho em colunas (To Do → In Progress → Done). Foco em limitar WIP (Work in Progress) e otimizar o fluxo contínuo sem iterações fixas.</p>
+            <div class="fw-tags">
+              <span>Fluxo Contínuo</span><span>WIP Limits</span><span>Lead Time</span>
+            </div>
+          </div>
+          <div class="fw-card">
+            <h4>XP (Extreme Programming)</h4>
+            <p>Práticas técnicas rigorosas: TDD, pair programming, refactoring contínuo, integração contínua e releases pequenos e frequentes. Qualidade de código acima de tudo.</p>
+            <div class="fw-tags">
+              <span>TDD</span><span>Pair Programming</span><span>CI</span>
+            </div>
+          </div>
+          <div class="fw-card">
+            <h4>SAFe</h4>
+            <p>Scaled Agile Framework para grandes organizações. Coordena múltiplas equipes ágeis em ARTs (Agile Release Trains) alinhadas à estratégia de negócio por meio de PIs trimestrais.</p>
+            <div class="fw-tags">
+              <span>PI Planning</span><span>ART</span><span>Portfolio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="devops-section">
+        <h3 class="sub-title light">Pipeline DevOps — Integração Contínua e Entrega Contínua</h3>
+        <p class="section-lead light" style="margin-bottom:2rem">
+          DevOps é uma cultura e conjunto de práticas que une desenvolvimento e operações,
+          eliminando silos e acelerando o ciclo de feedback por meio de automação.
+        </p>
+
+        <div class="devops-pipeline">
+          <div class="pipeline-stage">
+            <div class="ps-icon">📝</div>
+            <div class="ps-name">Plan</div>
+            <div class="ps-tools">Jira · Trello</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">💻</div>
+            <div class="ps-name">Code</div>
+            <div class="ps-tools">Git · GitHub</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">🔨</div>
+            <div class="ps-name">Build</div>
+            <div class="ps-tools">Maven · npm</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">🧪</div>
+            <div class="ps-name">Test</div>
+            <div class="ps-tools">Jest · Selenium</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">🚀</div>
+            <div class="ps-name">Release</div>
+            <div class="ps-tools">GitHub Actions</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">☁️</div>
+            <div class="ps-name">Deploy</div>
+            <div class="ps-tools">Docker · K8s</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="ps-icon">📊</div>
+            <div class="ps-name">Monitor</div>
+            <div class="ps-tools">Grafana · Datadog</div>
+          </div>
+        </div>
+
+        <div class="devops-pillars">
+          <div class="devops-pillar">
+            <h4>CI — Integração Contínua</h4>
+            <p>Cada commit dispara build automatizado e suite de testes. Falhas são detectadas imediatamente. O branch principal está sempre em estado deployável.</p>
+          </div>
+          <div class="devops-pillar">
+            <h4>CD — Entrega Contínua</h4>
+            <p>Software sempre pronto para deploy em produção após passar pelo pipeline. A decisão de release é humana, mas a capacidade técnica é automatizada e confiável.</p>
+          </div>
+          <div class="devops-pillar">
+            <h4>CD — Deploy Contínuo</h4>
+            <p>Toda mudança que passa pelo pipeline é automaticamente colocada em produção. Requer confiança extrema nos testes automatizados e infraestrutura de rollback.</p>
+          </div>
+          <div class="devops-pillar">
+            <h4>Observabilidade</h4>
+            <p>Logs estruturados, métricas de negócio e técnicas, e distributed tracing formam o tripé da observabilidade — essencial para operar sistemas distribuídos modernos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2>Pronto para aprofundar<br />seus conhecimentos?</h2>
+          <p>Este conteúdo cobre os fundamentos essenciais da engenharia de software profissional. Da teoria à prática, da ética à entrega contínua.</p>
+          <div class="cta-actions">
+            <a href="#paradigmas" class="btn-primary">Revisar Conteúdo</a>
+            <a href="#metodos" class="btn-ghost-dark">Ver Métodos</a>
+          </div>
+        </div>
+        <div class="cta-visual">
+          <div class="cta-code">
+            <span class="c">// Entregue com qualidade</span><br/>
+            <span class="k">const</span> dev = {<br/>
+            &nbsp;&nbsp;attitude: <span class="s">"continuous learning"</span>,<br/>
+            &nbsp;&nbsp;values: [<span class="s">"ethics"</span>, <span class="s">"quality"</span>],<br/>
+            &nbsp;&nbsp;method: <span class="fn">agile</span>(),<br/>
+            &nbsp;&nbsp;deploy: <span class="fn">continuously</span>()<br/>
+            };
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">Dev<span>Path</span></a>
+          <p>Material educacional sobre engenharia e desenvolvimento de software profissional — paradigmas, arquitetura, ciclos de vida e metodologias.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Módulos</h4>
+          <ul>
+            <li><a href="#paradigmas">Paradigmas de Desenvolvimento</a></li>
+            <li><a href="#etica">Aspectos Éticos</a></li>
+            <li><a href="#arquitetura">Arquitetura de Software</a></li>
+            <li><a href="#ciclo">Ciclo de Vida (SDLC)</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Metodologias</h4>
+          <ul>
+            <li><a href="#metodos">Tradicional vs. Ágil</a></li>
+            <li><a href="#cascata">Modelo Cascata</a></li>
+            <li><a href="#incremental">Modelo Incremental</a></li>
+            <li><a href="#espiral">Modelo Espiral</a></li>
+            <li><a href="#agil">DevOps Pipeline</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Referências</h4>
+          <ul>
+            <li><a href="#">Manifesto Ágil (2001)</a></li>
+            <li><a href="#">ACM Code of Ethics</a></li>
+            <li><a href="#">IEEE Software Engineering</a></li>
+            <li><a href="#">SWEBOK Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 DevPath — Engenharia de Software Profissional. Conteúdo educacional.</p>
+        <p>Desenvolvido com foco em qualidade, ética e boas práticas de engenharia de software.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
